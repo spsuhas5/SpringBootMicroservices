@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/springbootdb
+    test-while-idle: true
+    validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: department-service
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+server:
+  port: 9000
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defautZone: http://localhost:8761/eureka
+#  instance:
+#    hostname: localhost
